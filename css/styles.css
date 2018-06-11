@@ -1,0 +1,13 @@
+body {
+    width: 900px;
+    margin: 0 auto;
+}
+
+input,
+button {
+    border: solid black;
+}
+
+button {
+    cursor: pointer;
+}
