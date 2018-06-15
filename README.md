@@ -5,3 +5,4 @@ Add-project-description-here | Voyage-5 | chingu.io
 
 "Be the Leslie Knope of whatever you do." - Leslie Knope
 
+"'You Miss 100% of the shots you don't take. - Wayne Gretzky' - Michael Scott"
