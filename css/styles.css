@@ -2,10 +2,8 @@ body {
     font-family: "Arial", sans-serif;
     font-size: 12px;
     line-height: 1.5em;
-    color: #fff;
-    background-color: cornflowerblue;
-    
-    margin: 0 auto;
+    color: #222;
+    background-color: slategray;
 }
 
 input,
@@ -15,10 +13,15 @@ button {
 
 button {
     cursor: pointer;
-    
+
 }
 
 .container {
     width: 600px;
-}
+    min-height: 800px;
+    /* arbitrary dimensions */
+    margin: 0 auto 0;
+    padding: 0 5px;
+    background-color: #fff;
 
+}
