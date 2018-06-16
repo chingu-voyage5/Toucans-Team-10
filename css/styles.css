@@ -1,5 +1,10 @@
 body {
-    width: 900px;
+    font-family: "Arial", sans-serif;
+    font-size: 12px;
+    line-height: 1.5em;
+    color: #fff;
+    background-color: cornflowerblue;
+    
     margin: 0 auto;
 }
 
@@ -10,4 +15,10 @@ button {
 
 button {
     cursor: pointer;
+    
 }
+
+.container {
+    width: 600px;
+}
+
