@@ -5,9 +5,8 @@ var add = document.getElementById('add')
     event.preventDefault();
     if (value) 
         {addItemTodo(value)};
-    );
+}); 
     
-document.getElementById('item').value = '';
 
 
 function addItemTodo (text) {
@@ -16,6 +15,5 @@ function addItemTodo (text) {
     item.innerText = text;
 
     list.appendChild(item);
-    
-}
+};
 
