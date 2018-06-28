@@ -1,17 +1,23 @@
 
-var add = document.getElementById('add')
+let add = document.getElementById('add')
     add.addEventListener('click', function (event) {
-    var value = document.querySelector('input').value;
     event.preventDefault();
-    if (value) 
-        {addItemTodo(value)};
+    let input = document.querySelector('input');
+    let inputValue = input.value;
+    input.value = '';
+    if (inputValue) {
+        addItemTodo(inputValue)
+        
+    };
+    
+    
 }); 
     
 
 
 function addItemTodo (text) {
-    var item = document.createElement('li');
-    var list = document.getElementById('todo');
+    let item = document.createElement('li');
+    let list = document.getElementById('todo');
     item.innerText = text;
 
     list.appendChild(item);
