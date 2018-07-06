@@ -1,34 +1,29 @@
-//Remove and Complete Image or checkbox
 
+const ul = document.querySelector('ul');
+const removeButton = document.getElementsByClassName('remove');
+const add = document.getElementById('add')
 
-//User clicked on the submit button
-//If there is any text in the newtask field add text it to the todolist
-document.getElementById('add').addEventListener('click', function() {
-    var value = document.getElementById('newTask').value;
-    if (value) addItemTodo(value);
+add.addEventListener('click', function (event) {
+    event.preventDefault();
+    let input = document.querySelector('input');
+    let inputValue = input.value;
+    input.value = ''
+    if (inputValue) {
+        addItemTodo(inputValue)
+    };
+    
+    
+}); 
 
-});
-
-
-//Adds a new ite to the todo list
-function addItemTodo(text) {
-    var list = document.getElementById('todo')
-
-    var item = document.createElement('li');
+function addItemTodo (text) {
+    let list = document.getElementById('todo');
+    let item = document.createElement('li');
+    let remove = document.createElement('button');
+    remove.className = 'remove';
     item.innerText = text;
 
-    var buttons = document.createElement('div');
-    buttons.classList.add('button');
+    list.appendChild(item);
+    item.appendChild(remove);
+};
 
-    var remove = document.createElement('button');
-    remove.classList.add('remove');
-
-    var complete = document.createElement('button');
-
-
-    buttons.appendChild(remove);
-    buttons.appendChild(complete);
-    item.appendChild('buttons');
-
-}
 

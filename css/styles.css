@@ -1,13 +1,89 @@
+/* GLOBAL STYLES */
+
 body {
-    width: 900px;
+    font-family: "Arial", sans-serif;
+    font-size: 14px;
+    color: #222;
+    background-color: #eee;
     margin: 0 auto;
+    padding: 0;
 }
+
+.container {
+    /* arbitrary dimensions */
+    width: 450px;
+    min-height: 750px;
+    margin: 10px auto;
+    padding: 0;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 5px 3px 10px #999, -5px -5px 10px #999;
+    text-align: center;
+}
+
+ul {
+    list-style-type: none;
+}
+
+h1 {
+    font-size: 1.25em;
+}
+
+
+
+/* TO-DO STYLES */
 
 input,
 button {
-    border: solid black;
+    border: solid black 2px;
+    border-radius: 5px;
 }
 
 button {
     cursor: pointer;
+
+}
+
+.remove {
+    background-color: blue;
+}
+
+#todo {
+    text-align: left;
+}
+
+
+/* HEADER STYLES */
+
+header {
+    background-color: #444;
+    color: #fff;
+    padding: 2px 5px;
+    box-shadow: 0px 2px 5px #999;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+header a {
+    color: bisque;
+}
+
+header ul {
+    text-align: center;
+}
+
+header li {
+    display: inline-block;
+    margin: 0 2px;
+}
+
+/* FOOTER STYLES */
+
+footer {
+    text-align: center;
+    margin: 0 auto;
+}
+
+footer a {
+    color: #444;
 }
