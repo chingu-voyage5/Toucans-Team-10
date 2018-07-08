@@ -1,11 +1,6 @@
 const ul = document.querySelector('ul');
 const removeButton = document.getElementsByClassName('remove');
 const add = document.getElementById('add')
-const list = document.getElementById('todo');
-const test = document.getElementById('test');
-
-
-
 
 add.addEventListener('click', function (event) {
     event.preventDefault();
@@ -32,9 +27,8 @@ function removeItem(e) {
 function addItemTodo(text) {
     let list = document.getElementById('todo');
     let item = document.createElement('li');
-    let removeButton = document.createElement('button');
-    removeButton.className = 'remove';
-    item.className = 'itemClass';
+    let remove = document.createElement('button');
+    remove.className = 'remove';
     item.innerText = text;
 
 
@@ -42,6 +36,5 @@ function addItemTodo(text) {
     remove.addEventListener('click', removeItem);
 
     list.appendChild(item);
-    console.log(item);
-    item.appendChild(removeButton);
+    item.appendChild(remove);
 };
