@@ -1,7 +1,11 @@
 
-const ul = document.querySelector('ul');
-const removeButton = document.getElementsByClassName('remove');
+
 const add = document.getElementById('add')
+const list = document.getElementById('todo');
+const test = document.getElementById('test');
+
+
+
 
 add.addEventListener('click', function (event) {
     event.preventDefault();
@@ -11,19 +15,29 @@ add.addEventListener('click', function (event) {
     if (inputValue) {
         addItemTodo(inputValue)
     };
-    
-    
+
 }); 
 
+
+
 function addItemTodo (text) {
-    let list = document.getElementById('todo');
+
     let item = document.createElement('li');
-    let remove = document.createElement('button');
-    remove.className = 'remove';
+    let removeButton = document.createElement('button');
+    removeButton.className = 'remove';
+    item.className = 'itemClass';
     item.innerText = text;
 
     list.appendChild(item);
-    item.appendChild(remove);
+    console.log(item);
+    item.appendChild(removeButton);
 };
+
+
+
+
+
+
+
 
 
