@@ -46,8 +46,17 @@ button {
 
 .remove {
     background-color: blue;
+    height: 25px;
+    width: 25px;
+    margin-left: 50px;
 }
 
+.complete {
+    background-color: green;
+    margin-left: 75px;
+    height: 25px;
+    width: 25px;
+}
 #todo {
     text-align: left;
 }
