@@ -30,6 +30,12 @@ h1 {
 }
 
 
+/* Form */
+
+.form {
+    display: flex;
+    justify-content: center;
+}
 
 /* TO-DO STYLES */
 
@@ -41,7 +47,6 @@ button {
 
 button {
     cursor: pointer;
-
 }
 
 .remove {

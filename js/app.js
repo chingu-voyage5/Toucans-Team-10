@@ -1,7 +1,10 @@
+
+// variables
 const ul = document.querySelector('ul');
 const removeButton = document.getElementsByClassName('remove');
 const add = document.getElementById('add')
 const completeButton = document.getElementsByClassName('complete');
+
 
 add.addEventListener('click', function (event) {
     event.preventDefault();
@@ -11,8 +14,6 @@ add.addEventListener('click', function (event) {
     if (inputValue) {
         addItemTodo(inputValue)
     };
-
-
 });
 
 // remove item from list
@@ -21,7 +22,6 @@ function removeItem(e) {
     let parent = item.parentNode;
 
     parent.removeChild(item);
-
 };
 
 // add item to list
@@ -34,14 +34,11 @@ function addItemTodo(text) {
     complete.className = 'complete';
     item.innerText = text;
 
-
-    //add event listener remove item
+    // add event listener remove item
     remove.addEventListener('click', removeItem);
 
-
+    // add elements to the DOM
     list.appendChild(item);
     item.appendChild(remove);
     item.appendChild(complete);
-
 };
-
