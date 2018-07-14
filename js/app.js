@@ -2,7 +2,7 @@
 // variables
 const ul = document.querySelector('ul');
 const removeButton = document.getElementsByClassName('remove');
-const add = document.getElementById('add')
+const add = document.getElementById('add');
 const completeButton = document.getElementsByClassName('complete');
 
 
