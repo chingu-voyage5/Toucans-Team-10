@@ -57,6 +57,27 @@ function removeItem(e) {
     parent.removeChild(item);
 };
 
+function completeItem() {
+    let item = this.parentNode;
+    let parent = item.parentNode;
+    let id = parent.id;
+    let value = item.innerText;
+
+    let target;
+// check if the item should be added to the completed list or re-added to the todo ist
+    if (id === 'todo') {
+        target = document.getElementById('completed');
+    } else {
+        target = document.getElementById('todo');
+    }
+
+    parent.removeChild(item);
+    
+    // place completed item above previously completed items
+    target.insertBefore(item, target.childNodes[0]);
+};
+
+
 // add item to list
 function addItemTodo(text) {
     let list = document.getElementById('todo');
@@ -65,23 +86,33 @@ function addItemTodo(text) {
     let complete = document.createElement('button')
     remove.className = 'remove';
     complete.className = 'complete';
+
+    // add completed items to completed list
+    complete.classList.add('complete');
+    complete.innerText = completeButton;
     item.innerText = text;
 
     // add event listener remove item
     remove.addEventListener('click', removeItem);
 
+    // add event listener complete item
+    complete.addEventListener('click', completeItem);
+
     // add elements to the DOM
     list.appendChild(item);
     item.appendChild(remove);
     item.appendChild(complete);
-};
 
 
-// mark an item as complete function completeItem() 
 
-/* data.todo.splice and data.completed.push added to "completeItem" function to move task item from todo[] to completed[] 
 
-include statement to update data object
+
+/*
+ data.todo.splice and data.completed.push added to "completeItem" function to move task item from todo[] to completed[] 
+
+ include statement to update data object
 dataUpdate(); //update data object to local storage
-
 */
+
+
+};

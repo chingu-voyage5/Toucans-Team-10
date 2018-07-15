@@ -66,6 +66,11 @@ button {
     text-align: left;
 }
 
+/* COMPLETED LIST STYLES*/
+ #completed {
+     opacity: .75;
+ }
+
 
 /* HEADER STYLES */
 
